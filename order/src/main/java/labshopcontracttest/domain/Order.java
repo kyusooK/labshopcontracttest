@@ -46,7 +46,7 @@ public class Order {
         getInventoryQuery.setId(1L);
         OrderApplication.applicationContext
             .getBean(labshopcontracttest.external.InventoryService.class)
-            .testInventory(id, getInventoryQuery);
+            .testInventory(getInventoryQuery.getId(), getInventoryQuery);
     }
     //>>> Clean Arch / Port Method
 
