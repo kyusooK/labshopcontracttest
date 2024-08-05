@@ -1,10 +1,5 @@
 package com.example.template;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import com.jayway.jsonpath.DocumentContext;
-import com.jayway.jsonpath.JsonPath;
-import labshopcontracttest.OrderApplication;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,9 +16,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.web.client.RestTemplate;
+
+import com.jayway.jsonpath.DocumentContext;
+import com.jayway.jsonpath.JsonPath;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = labshopcontracttest.OrderApplication.class)
@@ -44,7 +40,7 @@ public class InventoryContractTest {
     @Test
     public void getInventory_stub_test() throws Exception {
         String url =
-            "http://localhost:8090/inventories/search/findByTestInventory/1";
+            "http://localhost:8090/inventories/search/findByGetInventory/1";
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
