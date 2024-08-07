@@ -51,9 +51,6 @@ logging:
 #    org.hibernate.type: trace
 #    org.springframework.cloud: debug
 
-api:
-  url:
-    : http://localhost:8083
 
 server:
   port: 8083
@@ -87,6 +84,3 @@ spring:
         event-out:
           destination: eventTopicDocker
           contentType: application/json
-api:
-  url: 
-    : http://localhost:8080

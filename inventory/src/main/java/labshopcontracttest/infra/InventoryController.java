@@ -33,12 +33,12 @@ public class InventoryController {
 
     private String apiUrl;
 
-    @GetMapping(path = "/inventories/search/findByTestInventory/id")
-    public Inventory testInventory(
+    @GetMapping(path = "/inventories/search/findByGetInventory/{id}")
+    public Inventory getInventory(
         @PathVariable("id") Long id,
         GetInventoryQuery getInventoryQuery
     ) {
-        return inventoryRepository.testInventory(
+        return inventoryRepository.findByGetInventory(
             id,
             getInventoryQuery.getStock()
         );
